@@ -6,7 +6,7 @@ const FORECAST_URL = "https://api.weather.gov/gridpoints/BOU/62,66/forecast";
 const HOURLY_URL = "https://api.weather.gov/gridpoints/BOU/62,66/forecast/hourly";
 const ALERTS_URL = `https://api.weather.gov/alerts/active?point=${LAT},${LON}`;
 const RADAR_LOOP = "https://radar.weather.gov/ridge/standard/KFTG_loop.gif";
-const REFRESH_MS = 10 * 60 * 1000;
+const REFRESH_MS = 5 * 60 * 1000;
 
 const COMPASS = [
   "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE",
