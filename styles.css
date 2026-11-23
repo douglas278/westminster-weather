@@ -25,7 +25,7 @@
   --error-text: #6e1b1b;
   --shadow: 0 1px 2px rgba(21, 32, 43, 0.05), 0 8px 24px rgba(21, 32, 43, 0.06);
   --radius: 16px;
-  --max: 68rem;
+  --max: 1400px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -244,13 +244,18 @@ h2 {
 }
 
 .week {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 0.75rem;
+}
+@media (max-width: 760px) {
+  .week { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .week { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 .day {
-  flex: 1 1 9em;
   min-width: 0;
   box-sizing: border-box;
   padding: 1rem 0.75rem;
